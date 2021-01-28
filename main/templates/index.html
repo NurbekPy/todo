@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoFront</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/checkbox.css">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}">
 </head>
 <body>
     <section>
@@ -19,6 +20,7 @@
         </div>
 
         <div class="todo_container">
+            {% for todo in todo_list %}
 
             <div class="todo_item">
                 <div class="todo_item_header">
@@ -36,6 +38,7 @@
                     </div>
                 </div> 
             </div>
+            {% endfor %}
 
             
         </div>
